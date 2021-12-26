@@ -55,9 +55,6 @@ headers["ADRUM"] = "isAjax:true"
 
 
 amr=requests.get(url, headers=headers,proxies={"http": proxy, "https": proxy},timeout=5).elapsed.total_seconds()
-if amr <= 4:
-        open("proxy.txt","+a").write(proxy+'''
-''')
 print("Done send")
 
 
