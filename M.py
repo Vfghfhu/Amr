@@ -22,11 +22,11 @@ if 'http' in str(proxy):
 	exit('try again')
 '''
 
-nm=len(open("proxy.txt","r").readlines())
-file = open("proxy.txt","r")
+nm=len(open("proxypro1.txt","r").readlines())
+file = open("proxypro1.txt","r")
 import random  
 Content = file.read()
-proxy=Content.split("\n")[random.randint(0,nm)]
+proxy='socks5://'+Content.split("\n")[random.randint(0,nm)]
 
 import requests
 from requests.structures import CaseInsensitiveDict
